@@ -22,7 +22,7 @@
   .rail button:hover { color: var(--ink); background: color-mix(in srgb, var(--raised) 60%, transparent); }
   .rail .n, .rail .pc { color: var(--faint); font: 400 12px var(--mono); font-variant-numeric: tabular-nums; }
   .rail .done .pc { color: var(--ok); }
-  .rail [aria-current] { background: var(--raised); color: var(--ink); box-shadow: inset 3px 0 0 var(--action); }
+  .rail [aria-current] { background: var(--raised); color: var(--ink); }
   .rail [aria-current] .n { color: var(--action); }
 
   @media (max-width: 1020px) {
@@ -34,7 +34,6 @@
     .rail button { flex: none; display: inline-flex; width: auto; min-height: 44px; padding: 0 12px; white-space: nowrap; }
     .rail .pc { display: none; }
     .rail .done .pc { display: inline; }
-    .rail [aria-current] { box-shadow: inset 0 -3px 0 var(--action); }
   }
 
   @media print {
