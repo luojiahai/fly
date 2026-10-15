@@ -1,0 +1,12 @@
+node_modules
+
+# Build artifacts
+.svelte-kit
+.wrangler
+build
+
+# OS
+.DS_Store
+
+# Agent tooling
+.claude

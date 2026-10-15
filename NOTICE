@@ -1,0 +1,35 @@
+Fly
+Copyright (c) 2026 luojiahai
+
+The MIT License in LICENSE covers the code in this repository. It does not
+cover the FlyByWire material listed below, which belongs to its authors.
+
+FlyByWire Simulations
+https://flybywiresim.com
+
+  shared/abbreviations.md is a verbatim copy of the Airbus Terms and
+  Abbreviations page of the FlyByWire documentation:
+  https://docs.flybywiresim.com/pilots-corner/airliner/abbreviations/
+  It is reproduced with credit. The FlyByWire documentation repository
+  (https://github.com/flybywiresim/docs) publishes no license. If FlyByWire
+  Simulations asks, the file comes out of this repository.
+
+  The procedure notes in aircraft/fbw-a32nx/ and aircraft/fbw-a380x/ follow
+  the A32NX and A380X beginner guides in the same documentation and link to
+  its pages. Each aircraft's README.md lists the pages its notes follow.
+
+  Fly is not affiliated with or endorsed by FlyByWire Simulations.
+
+B612 and B612 Mono
+  Copyright 2012 The B612 Project Authors, licensed under the SIL Open Font
+  License 1.1. Bundled from the @fontsource/b612 and @fontsource/b612-mono
+  packages.
+
+Lucide icons
+  Copyright (c) 2026 Lucide Icons and Contributors, licensed under the ISC License.
+  Bundled from the @lucide/svelte package.
+
+Material Symbols
+  Copyright Google LLC, licensed under the Apache License 2.0. The logo in
+  static/icon.svg and static/apple-icon.png draws the "travel" symbol
+  (rounded, filled).

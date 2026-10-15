@@ -1,0 +1,6 @@
+/_app/immutable/*
+  Cache-Control: public, max-age=31536000, immutable
+/icon.svg
+  Cache-Control: public, max-age=86400
+/apple-icon.png
+  Cache-Control: public, max-age=86400
