@@ -46,8 +46,8 @@
     display: block; padding: 10px 12px; border-radius: 2px; text-decoration: none; color: var(--muted);
     font: 400 13px/1.2 var(--ui); letter-spacing: .08em; text-transform: uppercase;
   }
-  .menu a:hover { color: var(--ink); background: var(--raised); }
-  .menu a[aria-current] { color: var(--ink); box-shadow: inset 3px 0 0 var(--action); }
+  .menu a:hover { color: var(--ink); background: color-mix(in srgb, var(--raised) 60%, transparent); }
+  .menu a[aria-current] { color: var(--ink); background: var(--raised); }
   .brand b { display: block; font: 400 13px/1.2 var(--ui); letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; }
   .brand .dot { color: var(--faint); }
   .brand .ac { color: var(--muted); }
