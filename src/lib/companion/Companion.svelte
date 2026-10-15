@@ -285,3 +285,44 @@
 <div id="tip" role="tooltip" hidden={!tip} bind:this={tipEl}>{tip?.text}</div>
 <div id="toast" role="status" hidden={!toast} bind:this={toastEl}><span id="toast-msg">{toast?.message}</span><button onclick={() => { toast?.undo(); hideToast(); }}>Undo</button></div>
 <div class="sr" id="live" aria-live="polite">{flight.live}</div>
+
+<style>
+  .skip {
+    position: fixed; left: 12px; top: 10px; z-index: 90; padding: 8px 12px;
+    background: var(--action); color: var(--paper); font: 700 12px var(--ui);
+    transform: translateY(-200%);
+  }
+  .skip:focus { transform: none; }
+
+  .app:not(.ready) { visibility: hidden; }
+  .app {
+    display: grid; grid-template-columns: var(--rail) minmax(0, 1fr) auto;
+    grid-template-rows: auto minmax(0, 1fr) auto; min-height: 100dvh;
+  }
+
+  #tip {
+    position: fixed; z-index: 80; max-width: min(300px, 80vw); padding: 7px 10px; pointer-events: none;
+    background: var(--ink); color: var(--paper); border-radius: 2px; box-shadow: 0 8px 24px var(--shadow);
+    font: 400 13px/1.4 var(--ui); white-space: pre-line;
+  }
+  #toast {
+    position: fixed; left: 50%; bottom: calc(var(--bar-h, 70px) + 14px); z-index: 70; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 14px; padding: 6px 6px 6px 16px;
+    background: var(--ink); color: var(--paper); border-radius: 2px; box-shadow: 0 8px 24px var(--shadow);
+    font: 700 14px var(--ui);
+  }
+  #toast button {
+    min-height: 34px; padding: 0 14px; cursor: pointer; border: 0; border-radius: 2px;
+    background: var(--paper); color: var(--ink); font: 700 13px var(--ui);
+  }
+  #toast button:focus-visible { outline-color: var(--paper); }
+
+  @media (max-width: 1020px) {
+    .app { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto minmax(0, 1fr) auto; }
+  }
+
+  @media print {
+    #tip, #toast, .skip { display: none !important; }
+    .app { display: block; }
+  }
+</style>

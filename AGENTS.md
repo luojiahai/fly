@@ -26,10 +26,14 @@ served by Cloudflare Workers static assets at `fly.liyu.dev`.
   parser's report during `pnpm build`.
 - `src/lib/companion/` is the UI. `Companion.svelte` owns the keyboard,
   tooltips and phase navigation, and `flight.svelte.ts` owns one aircraft's
-  state (ticks, fields, phase, open sheet). `companion.css` is the one
-  stylesheet, global on purpose: it carries the cockpit colour conventions
-  (cyan is a value to set, green is done or as expected, amber is something to
-  wait for).
+  state (ticks, fields, phase, open sheet). Each component styles itself in a
+  scoped `<style>` block, and reaches into a child component's markup with
+  `:global()`.
+- `src/app.css` holds what every component shares: the colour tokens, which
+  follow the cockpit conventions (cyan is a value to set, green is done or as
+  expected, amber is something to wait for), the resets, and the shared
+  primitives `.hbtn`, `.bigbtn`, `.full`, `.prose`, `.note`, `.sr` and
+  `.index`.
 - `src/routes/+page.svelte` sends `/` to the last aircraft used, or to
   `DEFAULT_AIRCRAFT`. `src/routes/+error.svelte` is the 404 page, served by
   `not_found_handling: "404-page"` in `wrangler.jsonc`.
