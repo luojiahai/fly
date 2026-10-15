@@ -73,7 +73,7 @@
   .seg { display: inline-flex; padding: 2px; border: 1px solid var(--line); border-radius: 2px; background: var(--surface); }
   .seg button {
     min-height: 34px; padding: 0 12px; border: 0; border-radius: 2px; background: none; cursor: pointer;
-    color: var(--muted); font: 700 12px/1 var(--ui); letter-spacing: .08em; text-transform: uppercase;
+    color: var(--muted); font: 400 12px/1 var(--ui); letter-spacing: .08em; text-transform: uppercase;
   }
   .seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
 

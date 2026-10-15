@@ -20,7 +20,7 @@
 <style>
   .scroll { overflow-x: auto; margin-bottom: 12px; }
   table { border-collapse: collapse; width: 100%; font-size: 12px; }
-  th, td { padding: 5px 8px 5px 6px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-weight: 400; }
+  th, td { padding: 5px 8px 5px 6px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
   thead th { color: var(--muted); font-size: 11px; }
   td { color: var(--muted); }
   td.val { color: var(--action); }

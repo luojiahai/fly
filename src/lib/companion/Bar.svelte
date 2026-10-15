@@ -39,7 +39,7 @@
     flex: 1 1 220px; min-width: 0; margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     color: var(--muted); font-size: 13px;
   }
-  #next-label b { color: var(--ink); }
+  #next-label b { color: var(--action); }
   .keys { order: 3; display: flex; flex-wrap: wrap; gap: 4px 14px; color: var(--muted); font-size: 11px; white-space: nowrap; }
   @media (pointer: coarse) { .keys { display: none; } }
 

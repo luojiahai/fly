@@ -74,12 +74,12 @@
   [role="tab"] {
     min-height: 36px; padding: 0 10px; cursor: pointer; white-space: nowrap;
     border: 0; border-radius: 2px; background: none;
-    color: var(--muted); font: 700 12px/1 var(--ui); letter-spacing: .06em; text-transform: uppercase;
+    color: var(--muted); font: 400 12px/1 var(--ui); letter-spacing: .06em; text-transform: uppercase;
   }
   [role="tab"][aria-selected="true"] { background: var(--raised); color: var(--ink); box-shadow: inset 0 -2px 0 var(--action); }
   #ref-panel { flex: 1; overflow-y: auto; overscroll-behavior: contain; padding: 14px 16px 40px; font-size: 13px; }
-  #ref-panel h2 { margin: 0 0 12px; font: 700 15px/1.3 var(--mono); letter-spacing: .03em; text-transform: uppercase; }
-  #ref-panel h3 { margin: 18px 0 8px; color: var(--muted); font: 700 11px var(--ui); letter-spacing: .12em; text-transform: uppercase; }
+  #ref-panel h2 { margin: 0 0 12px; font: 400 15px/1.3 var(--mono); letter-spacing: .03em; text-transform: uppercase; }
+  #ref-panel h3 { margin: 18px 0 8px; color: var(--muted); font: 400 11px var(--ui); letter-spacing: .12em; text-transform: uppercase; }
 
   .filter, .fields input {
     width: 100%; min-width: 0; padding: 7px 8px; border: 1px solid var(--line); border-radius: 2px;
@@ -92,15 +92,15 @@
   .fields { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; margin-bottom: 16px; }
   .fields label { display: grid; gap: 4px; color: var(--muted); font: 400 11px var(--ui); letter-spacing: .06em; text-transform: uppercase; }
   .chain { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0 0 14px; color: var(--muted); font-size: 12px; }
-  .chain b { padding: 2px 7px; border: 1px solid var(--line); border-radius: 2px; color: var(--ink); font-weight: 400; }
+  .chain b { padding: 2px 7px; border: 1px solid var(--line); border-radius: 2px; color: var(--ink); }
   .ex { margin: 0 0 10px; padding: 10px; border: 1px solid var(--line); border-radius: 2px; }
-  .ex h4 { margin: 0 0 6px; font: 700 12px var(--ui); }
+  .ex h4 { margin: 0 0 6px; font: 400 12px var(--ui); }
   .turn { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 8px; padding: 3px 0; }
-  .who { color: var(--muted); font: 700 10px/1.8 var(--ui); letter-spacing: .1em; text-transform: uppercase; }
-  .who small { display: block; font-weight: 400; line-height: 1.2; letter-spacing: 0; text-transform: none; }
+  .who { color: var(--muted); font: 400 10px/1.8 var(--ui); letter-spacing: .1em; text-transform: uppercase; }
+  .who small { display: block; line-height: 1.2; letter-spacing: 0; text-transform: none; }
   .you .who { color: var(--action); }
   .atc .say { color: var(--muted); }
-  .fill { color: var(--action); font-weight: 700; }
+  .fill { color: var(--action); }
   .tok { color: var(--faint); border-bottom: 1px dashed currentColor; }
 
   @media (max-width: 1020px) {

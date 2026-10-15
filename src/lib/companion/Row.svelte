@@ -40,15 +40,15 @@
     content: ""; width: 10px; height: 5px; border: solid var(--paper); border-width: 0 0 2.5px 2.5px;
     transform: translateY(-1px) rotate(-45deg);
   }
-  .act :global(b) { color: var(--action); font-weight: 700; }
+  .act :global(b) { color: var(--action); }
   .verify .act :global(b) { color: var(--ok); }
   .badge {
     display: inline-block; margin-right: 7px; padding: 1px 4px; vertical-align: 2px;
     border: 1px solid currentColor; border-radius: 2px; color: var(--ok);
-    font: 700 10px/1.3 var(--ui); letter-spacing: .1em; text-transform: uppercase;
+    font: 400 10px/1.3 var(--ui); letter-spacing: .1em; text-transform: uppercase;
   }
   .cond { color: var(--muted); font-size: 13px; }
-  .cl { display: block; color: var(--wait); font: 700 10px/1.5 var(--ui); letter-spacing: .1em; text-transform: uppercase; }
+  .cl { display: block; color: var(--wait); font: 400 10px/1.5 var(--ui); letter-spacing: .1em; text-transform: uppercase; }
   .row[aria-checked="true"],
   .row[aria-checked="true"] .act :global(b),
   .row[aria-checked="true"] :is(.badge, .cond, .cl) { color: var(--faint); }
