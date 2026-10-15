@@ -51,3 +51,49 @@
     </button>
   </div>
 </header>
+
+<style>
+  header {
+    grid-column: 1 / -1; grid-row: 1; position: sticky; top: 0; z-index: 20;
+    display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto;
+    grid-template-areas: "brand prog tools util";
+    align-items: center; gap: 10px 16px; padding: 10px 16px;
+    background: var(--paper); border-bottom: 1px solid var(--line);
+  }
+
+  .prog { grid-area: prog; display: flex; align-items: center; gap: 12px; min-width: 0; }
+  .segs { flex: 1; display: flex; gap: 3px; height: 8px; min-width: 0; }
+  .segs i { flex: 1 1 0; min-width: 2px; border-radius: 1px; background: linear-gradient(90deg, var(--ok) var(--p), var(--raised) 0); }
+  .segs i.cur { outline: 1.5px solid var(--action); outline-offset: 2px; }
+  .total { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .tools, .util { display: flex; align-items: center; gap: 6px; }
+  .tools { grid-area: tools; }
+  .util { grid-area: util; }
+  .seg { display: inline-flex; padding: 2px; border: 1px solid var(--line); border-radius: 2px; background: var(--surface); }
+  .seg button {
+    min-height: 34px; padding: 0 12px; border: 0; border-radius: 2px; background: none; cursor: pointer;
+    color: var(--muted); font: 700 12px/1 var(--ui); letter-spacing: .08em; text-transform: uppercase;
+  }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+
+  @media (max-width: 1020px) {
+    header { grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "brand tools util" "prog prog prog"; }
+    .tools { justify-self: end; }
+    .hbtn .lbl { display: none; }
+    .total { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  }
+
+  @media (max-width: 720px) {
+    header {
+      grid-template-columns: minmax(0, 1fr) auto auto; grid-template-areas: "brand brand util" "tools tools tools" "prog prog prog";
+      padding: 8px 12px;
+    }
+    .util { justify-self: end; }
+    .tools { justify-self: start; }
+  }
+
+  @media print {
+    header { display: none !important; }
+  }
+</style>

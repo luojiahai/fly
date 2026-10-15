@@ -3,7 +3,7 @@
   import "@fontsource/b612/700.css";
   import "@fontsource/b612-mono/400.css";
   import "@fontsource/b612-mono/700.css";
-  import "$lib/companion/companion.css";
+  import "../app.css";
   import { onMount } from "svelte";
   import { MediaQuery } from "svelte/reactivity";
   import { prefs, restorePrefs, SCHEMES } from "$lib/companion/prefs.svelte";

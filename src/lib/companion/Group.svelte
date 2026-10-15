@@ -33,3 +33,28 @@
 </script>
 
 <section class={["grp", open && "open"]} data-g={gi}>{#if group.title || proseIds.length}<div class="ghead">{#if group.title}<h2>{group.title}</h2>{:else}<span class="gt"></span>{/if}{#if group.items.length}<span class={["ct", done === group.items.length && "ok"]}>{done}/{group.items.length}</span>{/if}{#if proseIds.length}<button class="notes" aria-expanded={open} aria-controls={proseIds.join(" ")} onclick={toggle}>{#if open}Hide notes{:else}<span aria-hidden="true">ⓘ</span> {notes}{notes === 1 ? " note" : " notes"}{/if}</button>{/if}</div>{/if}{#each runs as run, ri (ri)}{#if run.kind === "prose"}<div class="prose" id={run.id}>{#each run.blocks as block, bi (bi)}<Prose {block} />{/each}</div>{:else}<div class="rows">{#each run.block.items as item (item.id)}<Row {item} label={run.block.conditionLabel} n={rowNumber(item.id)} />{/each}</div>{/if}{/each}</section>
+
+<style>
+  .grp { margin-top: 24px; }
+  .ghead { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .ghead h2, .ghead .gt {
+    flex: 1; display: flex; align-items: center; gap: 10px; margin: 0;
+    color: var(--muted); font: 700 12px/1.3 var(--ui); letter-spacing: .14em; text-transform: uppercase;
+  }
+  .ghead h2::after, .ghead .gt::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .ct { color: var(--faint); font-size: 12px; font-variant-numeric: tabular-nums; }
+  .ct.ok { color: var(--ok); }
+  .notes {
+    min-height: 30px; padding: 0 10px; cursor: pointer; white-space: nowrap;
+    border: 1px solid var(--line); border-radius: 2px; background: var(--surface);
+    color: var(--muted); font: 400 12px var(--ui);
+  }
+  :global([data-mode="learn"]) .notes { display: none; }
+  :global([data-mode="fly"]) .grp:not(.open) .prose { display: none; }
+
+  .rows { border-top: 1px solid var(--line); }
+
+  @media print {
+    .notes { display: none !important; }
+  }
+</style>

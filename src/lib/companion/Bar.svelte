@@ -27,3 +27,27 @@
   <button class="bigbtn go" id="tick-next" hidden={!flight.next} onclick={tickNext} bind:this={tickButton}>✓ Tick</button>
   <button class="bigbtn go" id="next-phase" hidden={!!flight.next || !flight.after} onclick={() => goToPhase(flight.phase + 1)} bind:this={goButton}>Next phase →</button>
 </div>
+
+<style>
+  .bar {
+    grid-column: 2; grid-row: 3; position: sticky; bottom: 0; z-index: 15;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    background: var(--paper); border-top: 1px solid var(--line);
+  }
+  #next-label {
+    flex: 1 1 220px; min-width: 0; margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    color: var(--muted); font-size: 13px;
+  }
+  #next-label b { color: var(--ink); }
+  .keys { order: 3; display: flex; flex-wrap: wrap; gap: 4px 14px; color: var(--muted); font-size: 11px; white-space: nowrap; }
+  @media (pointer: coarse) { .keys { display: none; } }
+
+  @media (max-width: 1020px) {
+    .bar { grid-column: 1; grid-row: 4; }
+  }
+
+  @media print {
+    .bar { display: none !important; }
+  }
+</style>
