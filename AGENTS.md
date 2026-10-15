@@ -49,7 +49,9 @@ served by Cloudflare Workers static assets at `fly.liyu.dev`.
   stderr. Diff two runs to see what a notes edit changes.
 - `pnpm preview` builds and serves `build/` with `wrangler dev`, including the
   404 handling.
-- `pnpm deploy` builds and runs `wrangler deploy`.
+- `pnpm deploy` builds, then `scripts/deploy.ts` runs `wrangler deploy` on
+  `main` and `wrangler preview` on any other branch. It reads the branch from
+  `WORKERS_CI_BRANCH` in Workers Builds and from git elsewhere.
 
 There is no test suite. `pnpm check` and `pnpm build` are the gate, and
 `.github/workflows/ci.yml` runs both on every push. Cloudflare Workers Builds
