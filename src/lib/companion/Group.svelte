@@ -39,7 +39,7 @@
   .ghead { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
   .ghead h2, .ghead .gt {
     flex: 1; display: flex; align-items: center; gap: 10px; margin: 0;
-    color: var(--muted); font: 700 12px/1.3 var(--ui); letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted); font: 400 12px/1.3 var(--ui); letter-spacing: .14em; text-transform: uppercase;
   }
   .ghead h2::after, .ghead .gt::after { content: ""; flex: 1; height: 1px; background: var(--line); }
   .ct { color: var(--faint); font-size: 12px; font-variant-numeric: tabular-nums; }

@@ -1,8 +1,6 @@
 <script lang="ts">
   import "@fontsource/b612/400.css";
-  import "@fontsource/b612/700.css";
   import "@fontsource/b612-mono/400.css";
-  import "@fontsource/b612-mono/700.css";
   import "../app.css";
   import { onMount } from "svelte";
   import { MediaQuery } from "svelte/reactivity";

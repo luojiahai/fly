@@ -289,7 +289,7 @@
 <style>
   .skip {
     position: fixed; left: 12px; top: 10px; z-index: 90; padding: 8px 12px;
-    background: var(--action); color: var(--paper); font: 700 12px var(--ui);
+    background: var(--action); color: var(--paper); font: 400 12px var(--ui);
     transform: translateY(-200%);
   }
   .skip:focus { transform: none; }
@@ -309,11 +309,11 @@
     position: fixed; left: 50%; bottom: calc(var(--bar-h, 70px) + 14px); z-index: 70; transform: translateX(-50%);
     display: flex; align-items: center; gap: 14px; padding: 6px 6px 6px 16px;
     background: var(--ink); color: var(--paper); border-radius: 2px; box-shadow: 0 8px 24px var(--shadow);
-    font: 700 14px var(--ui);
+    font: 400 14px var(--ui);
   }
   #toast button {
     min-height: 34px; padding: 0 14px; cursor: pointer; border: 0; border-radius: 2px;
-    background: var(--paper); color: var(--ink); font: 700 13px var(--ui);
+    background: var(--paper); color: var(--ink); font: 400 13px var(--ui);
   }
   #toast button:focus-visible { outline-color: var(--paper); }
 
