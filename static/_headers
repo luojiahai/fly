@@ -4,3 +4,5 @@
   Cache-Control: public, max-age=86400
 /apple-icon.png
   Cache-Control: public, max-age=86400
+/favicon.ico
+  Cache-Control: public, max-age=86400
