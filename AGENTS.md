@@ -51,8 +51,9 @@ served by Cloudflare Workers static assets at `fly.liyu.dev`.
   404 handling.
 - `pnpm deploy` builds and runs `wrangler deploy`.
 
-There is no test suite. `pnpm check` and `pnpm build` are the gate. Cloudflare
-Workers Builds runs the build on every push: `main` deploys to production and
+There is no test suite. `pnpm check` and `pnpm build` are the gate, and
+`.github/workflows/ci.yml` runs both on every push. Cloudflare Workers Builds
+runs only the build, also on every push: `main` deploys to production and
 other branches upload a preview version.
 
 ## Add an aircraft
