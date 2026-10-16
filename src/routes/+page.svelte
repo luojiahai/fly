@@ -12,7 +12,7 @@
 
 <svelte:head>
   <title>Fly</title>
-  <meta name="description" content="Gate to gate tick-off checklists for FlyByWire aircraft in Microsoft Flight Simulator." />
+  <meta name="description" content="Flight sim checklists you tick off as you fly, gate to gate. Open one beside Microsoft Flight Simulator on a tablet or a second screen." />
   {@html redirect}
 </svelte:head>
 

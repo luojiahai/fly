@@ -6,7 +6,7 @@
 
 <svelte:head>
   <title>Fly · {data.name}</title>
-  <meta name="description" content="A gate to gate tick-off checklist for the {data.name} in Microsoft Flight Simulator, with the light matrix, abbreviations and VATSIM radio scripts." />
+  <meta name="description" content="A flight sim checklist for the {data.name} that you tick off as you fly, gate to gate, with the light matrix, abbreviations and VATSIM radio scripts." />
 </svelte:head>
 
 {#key data.slug}

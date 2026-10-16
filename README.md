@@ -1,8 +1,8 @@
 # Fly
 
-Gate to gate tick-off checklists for FlyByWire aircraft in Microsoft Flight
-Simulator. Open one on a tablet or a second screen beside the sim, tick each
-step as you go, and keep the lights matrix, the Airbus abbreviations and VATSIM
+Flight sim checklists you tick off as you fly, gate to gate. Open one on a
+tablet or a second screen beside Microsoft Flight Simulator, tick each step as
+you go, and keep the lights matrix, the Airbus abbreviations and VATSIM
 radio scripts one key away.
 
 Live at [fly.liyu.dev](https://fly.liyu.dev). Two aircraft so far:
