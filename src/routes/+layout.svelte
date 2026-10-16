@@ -29,7 +29,7 @@
     root.dataset.mode = prefs.mode;
     const resolved = prefs.scheme === "auto" ? (prefersDark.current ? "dark" : "light") : prefs.scheme;
     document.querySelector('meta[name="color-scheme"]')?.setAttribute("content", prefs.scheme === "auto" ? "light dark" : prefs.scheme);
-    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", SCHEMES[resolved].paper);
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", SCHEMES[resolved].panel);
   });
 </script>
 

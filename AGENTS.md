@@ -29,11 +29,12 @@ served by Cloudflare Workers static assets at `fly.liyu.dev`.
   state (ticks, fields, phase, open sheet). Each component styles itself in a
   scoped `<style>` block, and reaches into a child component's markup with
   `:global()`.
-- `src/app.css` holds what every component shares: the colour tokens, which
-  follow the cockpit conventions (cyan is a value to set, green is done or as
-  expected, amber is something to wait for), the resets, and the shared
-  primitives `.hbtn`, `.bigbtn`, `.full`, `.prose`, `.note`, `.sr` and
-  `.index`.
+- `src/app.css` holds what every component shares: the colour tokens, the
+  resets, and the shared primitives `.hbtn`, `.bigbtn`, `.full`, `.prose`,
+  `.note`, `.sr` and `.index`. The neutrals come from the Airbus panel
+  palette, and `--panel` paints the header, rail and bottom bar around the
+  black screen. The status colours keep the cockpit conventions: cyan is a
+  value to set, green is done or as expected, amber is something to wait for.
 - `src/routes/+page.svelte` sends `/` to the last aircraft used, or to
   `DEFAULT_AIRCRAFT`. `src/routes/+error.svelte` is the 404 page, served by
   `not_found_handling: "404-page"` in `wrangler.jsonc`.

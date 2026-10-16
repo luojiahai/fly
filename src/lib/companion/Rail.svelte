@@ -11,8 +11,8 @@
 <style>
   .rail {
     grid-column: 1; grid-row: 2 / 4; align-self: start;
-    position: sticky; top: var(--header-h, 61px); max-height: calc(100dvh - var(--header-h, 61px));
-    overflow-y: auto; padding: 14px 10px; border-right: 1px solid var(--line);
+    position: sticky; top: var(--header-h, 61px); height: calc(100dvh - var(--header-h, 61px));
+    overflow-y: auto; padding: 14px 10px; border-right: 1px solid var(--line); background: var(--panel);
   }
   .rail button {
     display: grid; grid-template-columns: 20px minmax(0, 1fr) auto; gap: 8px; align-items: center;
@@ -27,8 +27,8 @@
 
   @media (max-width: 1020px) {
     .rail {
-      grid-row: 2; z-index: 12; max-height: none; display: flex; gap: 2px; padding: 4px 10px;
-      overflow-x: auto; scrollbar-width: none; border-right: 0; border-bottom: 1px solid var(--line); background: var(--paper);
+      grid-row: 2; z-index: 12; height: auto; display: flex; gap: 2px; padding: 4px 10px;
+      overflow-x: auto; scrollbar-width: none; border-right: 0; border-bottom: 1px solid var(--line); background: var(--panel);
     }
     .rail::-webkit-scrollbar { display: none; }
     .rail button { flex: none; display: inline-flex; width: auto; min-height: 44px; padding: 0 12px; white-space: nowrap; }

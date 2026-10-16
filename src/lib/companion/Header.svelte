@@ -58,7 +58,7 @@
     display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto;
     grid-template-areas: "brand prog tools util";
     align-items: center; gap: 10px 16px; padding: 10px 16px;
-    background: var(--paper); border-bottom: 1px solid var(--line);
+    background: var(--panel); border-bottom: 1px solid var(--line);
   }
 
   .prog { grid-area: prog; display: flex; align-items: center; gap: 12px; min-width: 0; }
