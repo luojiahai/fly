@@ -1,9 +1,9 @@
 import { KEYS, load, save } from "./storage";
 
 export const SCHEMES = {
-  auto: { next: "dark", label: "Auto", paper: null },
-  dark: { next: "light", label: "Dark", paper: "#000000" },
-  light: { next: "auto", label: "Light", paper: "#e9edf0" },
+  auto: { next: "dark", label: "Auto", panel: null },
+  dark: { next: "light", label: "Dark", panel: "#132128" },
+  light: { next: "auto", label: "Light", panel: "#b7c9d3" },
 } as const;
 export type Scheme = keyof typeof SCHEMES;
 

@@ -33,7 +33,7 @@
     grid-column: 2; grid-row: 3; position: sticky; bottom: 0; z-index: 15;
     display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px;
     padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
-    background: var(--paper); border-top: 1px solid var(--line);
+    background: var(--panel); border-top: 1px solid var(--line);
   }
   #next-label {
     flex: 1 1 220px; min-width: 0; margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
