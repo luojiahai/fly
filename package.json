@@ -8,6 +8,7 @@
     "build": "vite build",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "payload": "node scripts/payload.ts",
+    "icons": "node scripts/icons.ts",
     "preview": "pnpm build && wrangler dev",
     "deploy": "pnpm build && node scripts/deploy.ts"
   },

@@ -48,6 +48,8 @@ served by Cloudflare Workers static assets at `fly.liyu.dev`.
   that breaks the rules below.
 - `pnpm payload <slug>` prints one aircraft's payload as JSON and its report on
   stderr. Diff two runs to see what a notes edit changes.
+- `pnpm icons` regenerates `static/apple-icon.png` and `static/favicon.ico`
+  from `static/icon.svg`. It needs `rsvg-convert` and ImageMagick.
 - `pnpm preview` builds and serves `build/` with `wrangler dev`, including the
   404 handling.
 - `pnpm deploy` builds, then `scripts/deploy.ts` runs `wrangler deploy` on
